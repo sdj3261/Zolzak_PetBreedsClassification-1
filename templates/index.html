@@ -1,0 +1,272 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Graduation Project</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+
+  <!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico')}}">
+
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/icomoon.css') }}">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/flexslider.css') }}">
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/flexslider.css') }}">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+	<!-- Modernizr JS -->
+	<script src="{{ url_for('static', filename='js/modernizr-2.6.2.min.js') }}" > </script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="{{ url_for('static', filename='js/respond.min.js') }}" > </script>
+	<![endif]-->
+
+	</head>
+	<body>
+
+	<nav id="colorlib-main-nav" role="navigation">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
+		<div class="js-fullheight colorlib-table">
+			<div class="colorlib-table-cell js-fullheight">
+				<ul>
+				<li><a href="{{ url_for('info') }}">Home</a></li>
+				<li><a href="{{ url_for('dog') }}">Dog Classifier</a></li>
+				<li><a href="{{ url_for('cat') }}">Cat Classifier</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	
+	<div id="colorlib-page">
+		<header>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="colorlib-navbar-brand">
+							<a name ="top" class="colorlib-logo" href="{{ url_for('info') }}">Home</a>
+						</div>
+						<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<aside id="colorlib-hero">
+			<div class="flexslider">
+				<ul class="slides">
+			   	<li style="background-image: url({{url_for('static', filename='images/img_bg_3.jpg')}});">
+			   		<div class="overlay"></div>
+			   		<div class="container">
+			   			<div class="row">
+				   			<div class="col-md-8 col-sm-12 col-md-offset-2 col-md-pull-2 slider-text">
+				   				<div class="slider-text-inner">
+				   					<h2>Hello Everyone!</h2>
+				   					<h1>Pet Breed Classification Project</h1>
+				   				</div>
+				   			</div>
+				   		</div>
+			   		</div>
+			   	</li>
+			  	</ul>
+		  	</div>
+		</aside>
+		<div id="colorlib-services">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center animate-box intro-heading">
+						<h2>We do</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4 animate-box">
+						<div class="services">
+							<span class="icon"><i class="icon-pen3"></i></span>
+							<div class="desc">
+								<h3>Web Development</h3>
+								<p>Use Flask and Design html/css/javascript</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 animate-box">
+						<div class="services">
+							<span class="icon"><i class="icon-photo"></i></span>
+							<div class="desc">
+								<h3>Training Model</h3>
+								<p>Training thousands of cats and dogs image data with tensorflow</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 animate-box">
+						<div class="services">
+							<span class="icon"><i class="icon-params"></i></span>
+							<div class="desc">
+								<h3>High Accuracy</h3>
+								<p>Transfer Learning and Hyperparameter Tuning, Bottleneck feature</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4 animate-box">
+						<div class="services">
+							<span class="icon"><i class="icon-paperplane"></i></span>
+							<div class="desc">
+								<h3>Target</h3>
+								<p>Anyone who wants to know the breed of pets</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 animate-box">
+						<div class="services">
+							<span class="icon"><i class="icon-diamond"></i></span>
+							<div class="desc">
+								<h3>Marketing</h3>
+								<p>Service is free</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 animate-box">
+						<div class="services">
+							<span class="icon"><i class="icon-bulb"></i></span>
+							<div class="desc">
+								<h3>Contact</h3>
+								<p>Please check our github and wiki page</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+
+		<div id="colorlib-counter" class="colorlib-counters">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center animate-box intro-heading">
+						<h2>Tool Guides</h2>
+						<p>1.Select Mode<br>2.Upload Image<br>3.Check Result</p>
+					</div>
+				</div>
+				<div class="row animate-box">
+					<div class="col-md-10 col-md-offset-1">
+						<div class="row">
+							<div class="col-md-4 text-center">
+								<span class="colorlib-counter js-counter" data-from="0" data-to="8351" data-speed="5000" data-refresh-interval="50"></span>
+								<span class="colorlib-counter-label">Training images of Dog</span>
+							</div>
+							<div class="col-md-4 text-center">
+								<span class="colorlib-counter js-counter" data-from="0" data-to="4890" data-speed="5000" data-refresh-interval="50"></span>
+								<span class="colorlib-counter-label">Training images of Cat</span>
+							</div>
+							<div class="col-md-4 text-center">
+								<span class="colorlib-counter js-counter" data-from="0" data-to="86" data-speed="5000" data-refresh-interval="50"></span>
+								<span class="colorlib-counter-label">Accuracy of Prediction</span>
+							</div>
+						</div>
+
+
+
+						<div class="row">
+							<div class="col-md-4 text-center">
+								<span class="colorlib-counter js-counter" data-from="0" data-to="133" data-speed="5000" data-refresh-interval="50"></span>
+								<span class="colorlib-counter-label">Number of Species of Dog</span>
+							</div>
+							<div class="col-md-4 text-center">
+								<span class="colorlib-counter js-counter" data-from="0" data-to="30" data-speed="5000" data-refresh-interval="50"></span>
+								<span class="colorlib-counter-label">Number of Species of Cat</span>
+							</div>
+							<div class="col-md-4 text-center">
+								<span class="colorlib-counter js-counter" data-from="0" data-to="11" data-speed="5000" data-refresh-interval="50"></span>
+								<span class="colorlib-counter-label">Model Learning Time (hours)</span>
+							</div>
+						</div>
+
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+
+		<footer>
+			<div id="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4 col-pb-sm">
+							<div class="row">
+								<div class="col-md-10">
+									<h2>Gachon University</h2>
+									<p>Software Department<br>Graduation Project</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-pb-sm">
+							<h2>Developed By</h2>
+							<p>Ahn Giju, Shin Dongjae</p>
+						</div>
+						<div class="col-md-4 col-pb-sm right-display">
+							<h2>Follow Us</h2>
+							<p class="colorlib-social-icons colorlib-social-icons2">
+								<a href="https://github.com/GijuAhn/Zolzak_PetBreedsClassification"><i class="icon-github"></i></a>
+								<a href="#top"><i class="icon-search2"></i></a>
+							</p>
+							<p>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	
+	</div>
+
+	<!-- jQuery -->
+	<script src="{{ url_for('static', filename='js/jquery.min.js') }}" > </script>
+	<!-- jQuery Easing -->
+	<script src="{{ url_for('static', filename='js/jquery.easing.1.3.js') }}" > </script>
+	<!-- Bootstrap -->
+	<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}" > </script>
+	<!-- Waypoints -->
+	<script src="{{ url_for('static', filename='js/jquery.waypoints.min.js') }}" > </script>
+	<!-- Flexslider -->
+	<script src="{{ url_for('static', filename='js/jquery.flexslider-min.js') }}" > </script>
+	<!-- Counters -->
+	<script src="{{ url_for('static', filename='js/jquery.countTo.js') }}" > </script>
+	<!-- Owl Carousel -->
+	<script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}" > </script>
+
+	<!-- Main JS (Do not remove) -->
+	<script src="{{ url_for('static', filename='js/main.js') }}" > </script>
+
+	</body>
+</html>
+
