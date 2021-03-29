@@ -4,7 +4,7 @@
 
 <div style="text-align: right"> Gachon University, AI·Software department </div>
 <div style="text-align: right"><strong> Author: Ahn Giju, Shin Dongjae </strong></div>
-<div style="text-align: right"><strong> Advisor: Woongkee Loh </strong></div>
+<div style="text-align: right"><strong> Advisor: Loh Woongkee </strong></div>
 
 <br>
 
@@ -23,7 +23,7 @@ The theme of our graduation project is classifying breeds of pets, especially do
 
 We created a web-based Python program that tells you what breed you have when you put pictures of dogs or cats. Furthermore, when a user enters a picture of his or her face, he or she adds a feature that shows the breed of a dog or cat that looks like him or her, adding to the fun of using the app.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nEeI4QNNJhY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## Welcome to GitHub Pages
 
