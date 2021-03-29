@@ -74,7 +74,7 @@ The video below is a recording of Graduation II, the final presentation. We're g
 
 The initial goal was to create an object-detect automatic photo classifier, album cleanup program for people whose photos were not stored on the hard disk and were mixed randomly. We've tried a variety of things with CIFAR-100 dataset (100 classes, 60000 images), and we've found that the more superclasses, the more difficult the image classification becomes, the more difficult it is to cover with most machines. There was a feedback here to reduce the number of superclasses, and instead to break down the subclasses, which led to the idea of pet classification applications.
 
-
+![TooManyClasses](https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/tooMuchSuperclass.png)
 
 2018년 농림축산검역본부의 통계[[기사]](http://www.animalrights.kr/news/articleView.html?idxno=823)에 따르면, 국내에서 반려동물을 기르는 가구 비율은 전체 가구의 23.7% 이고, 반려동물을 기르는 가정의 90%이상(개 75.9%, 고양이 14.4%)이 개 또는 고양이를 기르는 것으로 조사되었습니다. 따라서, 개와 고양이를 합리적인 수준으로 분류할 수 있다면, 전체 반려동물의 90% 이상을 커버할 수 있다고 판단했습니다.\
 또한, 강아지는 많은 사람들이 키우는 만큼 그 종류와 수가 많지만, 고양이는 상대적으로 품종의 수도 적고, 키우는 사람들의 수도 적었습니다. 이 비율은 약 5:1 정도로 조사되었고, 이에 따라 개와 고양이 이미지 데이터셋을 각각 133종(8351이미지), 30종(4890이미지) 규모로 구축하였습니다.
