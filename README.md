@@ -6,6 +6,9 @@ The theme of our graduation project is classifying breeds of pets, especially do
 
 We created a web-based Python program that tells you what breed you have when you put pictures of dogs or cats. Furthermore, when a user enters a picture of his or her face, he or she adds a feature that shows the breed of a dog or cat that looks like him or her, adding to the fun of using the app.
 
+![cat](https://github.com/GijuAhn/Zolzak_PetBreedsClassification/blob/gh-pages/imgs_for_pages/persian_output.PNG?raw=true)
+![human to dog](https://github.com/GijuAhn/Zolzak_PetBreedsClassification/blob/gh-pages/imgs_for_pages/suzi_output.PNG?raw=true)
+
 ⭐ For more information, [***please visit our project GitHub pages!***](https://gijuahn.github.io/Zolzak_PetBreedsClassification/)\
 You can move the page by clicking the link above. 👆
 
