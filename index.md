@@ -2,10 +2,10 @@
 
 ## **🐶 Pet Breeds Classification 🐱**
 
-<div style="text-align: right"> Gachon University </div>
-<div style="text-align: right"> AI·Software department </div>
-<div style="text-align: right"><strong> Ahn Giju </strong></div>
-<div style="text-align: right"><strong> Shin Dongjae </strong></div>
+<div style="text-align: right"> Gachon University, AI·Software department </div>
+<div style="text-align: right"><strong> Author: Ahn Giju, Shin Dongjae </strong></div>
+<div style="text-align: right"><strong> Advisor: Woongkee Loh </strong></div>
+
 <br>
 
 ## Contents
