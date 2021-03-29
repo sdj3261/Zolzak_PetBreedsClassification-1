@@ -32,18 +32,57 @@ The video below is a recording of Graduation II, the final presentation. We're g
 </p>
 
 ## Development Environment
+
+- Development Tool
+  - Pycharm
+  - Jupyter Notebook
+  - Visual Studio Code
+
 - Package manager
   - Anaconda 2019.03 version
-  - 
-프로젝트에 사용된 데이터셋은 다음과 같습니다.
-- ![Stanford Dog dataset](http://vision.stanford.edu/aditya86/ImageNetDogs/)
-- Google image crawling (cat dataset is 100% self-build.)
+
+- How to create a virtual environment and install packages for development
+  1. Install [Anaconda](https://www.anaconda.com/).
+  2. Download ['zolzak_conda_packages_export.txt'](https://github.com/GijuAhn/Zolzak_PetBreedsClassification/blob/gh-pages/zolzak_conda_packages_export.txt) here.
+  3. Launch Anaconda prompt with administrator.
+  4. You can run the commands below to create a virtual environment and install packages at once!
+
+  ```cmd
+  conda create -n(--name) VENV_NAME --file PATH\zolzak_conda_packages_export.txt
+  ```
+
+- Language
+  - Python 3.7
+  - Javascript
+  - HTML/CSS/SCSS
+
+- Mainly Used Libraries & Package
+  - Numpy, Pandas, Scikit-learn, Matplotlib
+  - Tensorflow 1.14.0, Tensorboard 1.14.0
+  - Keras 2.1.5
+  - Flask 1.1.2
+  - OpenCV 4.3.0
+
+- Dataset
+  - [Stanford Dog dataset](http://vision.stanford.edu/aditya86/ImageNetDogs/)
+  - Google image crawling
+  - Based on web crawling and intensive image preprocessing(automatically + manually), we have merged and replenished open source datasets to build custom datasets for our project. The dataset is sized as follows: 8351 images of 133 kinds of dogs, 4890 images of 30 kinds of cats.
+
+## Idea Improvement
+
+초기 목표는 하드디스크에 저장되지 않은 사진들이 정리되지 않은 채 마구잡이로 섞여 있는 사람들을 위한 object-detect 자동 사진 분류기, 앨범 정리 프로그램을 만들 계획이었습니다. 저희는 CIFAR-100 dataset (100개 클래스, 60000장 이미지) 으로 다양한 시도를 해 보았는데요, 여기서 superclass 의 개수가 많아질수록 웬만한 머신으로 커버할 수 없을 만큼 이미지 분류가 급격히 어려워진다는 사실을 파악했습니다. 여기서 superclass 의 개수를 줄이고, 대신 subclass를 세분화하여 접근하자는 피드백이 있었고, 이를 바탕으로 애완동물 품종 분류 애플리케이션이라는 아이디어로 발전시켰습니다.
+
+The initial goal was to create an object-detect automatic photo classifier, album cleanup program for people whose photos were not stored on the hard disk and were mixed randomly. We've tried a variety of things with CIFAR-100 dataset (100 classes, 60000 images), and we've found that the more superclasses, the more difficult the image classification becomes, the more difficult it is to cover with most machines. There was a feedback here to reduce the number of superclasses, and instead to break down the subclasses, which led to the idea of pet classification applications.
+
+
+
+2018년 농림축산검역본부의 통계[[기사]](http://www.animalrights.kr/news/articleView.html?idxno=823)에 따르면, 국내에서 반려동물을 기르는 가구 비율은 전체 가구의 23.7% 이고, 반려동물을 기르는 가정의 90%이상(개 75.9%, 고양이 14.4%)이 개 또는 고양이를 기르는 것으로 조사되었습니다. 따라서, 개와 고양이를 합리적인 수준으로 분류할 수 있다면, 전체 반려동물의 90% 이상을 커버할 수 있다고 판단했습니다.\
+또한, 강아지는 많은 사람들이 키우는 만큼 그 종류와 수가 많지만, 고양이는 상대적으로 품종의 수도 적고, 키우는 사람들의 수도 적었습니다. 이 비율은 약 5:1 정도로 조사되었고, 이에 따라 개와 고양이 이미지 데이터셋을 각각 133종(8351이미지), 30종(4890이미지) 규모로 구축하였습니다.
+
+According to statistics from the Ministry of Agriculture, Food and Rural Affairs in 2018, 23.7% of households raised pets in Korea, and more than 90% (75.9% of dogs, 14.4% of cats) raised dogs or cats. Therefore, if dogs and cats can be classified at a reasonable level, they can cover more than 90 percent of all pets.\
+Also, dogs have many kinds and numbers as many people raise them, but cats have relatively few breeds and fewer people raise them. This ratio was found to be about 5:1, resulting in a dog and cat image dataset of 133 specifications to 8351 images and 30 specifications to 4890 images, respectively.
 
 ## Welcome to GitHub Pages
-
-흐르는 강물을 거꾸로 거슬러 오르는 연어들의 공백 두칸이 줄바꿈  
-역슬래시 써도    줄바꿈 된다는데 맞나여?? ㄹㅇ 인지 확인합니다\
-진짜네 ㄷㄷ...
 
 You can use the [editor on GitHub](https://github.com/GijuAhn/Zolzak_PetBreedsClassification/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
@@ -58,7 +97,7 @@ Syntax highlighted code block
 
 # Header 1
 ## Header 2
-### Header 3 아니 근데 이게 맞다고요? 지킬은 걍 푸시만 하면 됨?
+### Header 3
 
 - Bulleted
 - List
