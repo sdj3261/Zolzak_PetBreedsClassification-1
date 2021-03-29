@@ -4,14 +4,14 @@
 
 <div style="text-align: right"> Gachon University, AI·Software department </div>
 <div style="text-align: right"><strong> Author: Ahn Giju, Shin Dongjae </strong></div>
-<div style="text-align: right"><strong> Advisor: Loh Woongkee </strong></div>
+<div style="text-align: right"><strong> Advisor: Prof. Loh Woongkee </strong></div>
 
 <br>
 
 ## Contents
 
 - [Introduction](#introduction)
-- [타이틀2]
+- [Development Environment](#development-environment)
 
 ## Introduction
 
@@ -23,13 +23,27 @@ The theme of our graduation project is classifying breeds of pets, especially do
 
 We created a web-based Python program that tells you what breed you have when you put pictures of dogs or cats. Furthermore, when a user enters a picture of his or her face, he or she adds a feature that shows the breed of a dog or cat that looks like him or her, adding to the fun of using the app.
 
+아래 영상은 졸업작품II, 최종 프레젠테이션을 녹화한 것입니다. 프로젝트 진행 과정 및 결과를 전체적으로 설명하고 있으므로, 이 프로젝트에 관심이 있으시다면 시청을 추천합니다.
+
+The video below is a recording of Graduation II, the final presentation. We're giving you a complete overview of the project progress and results, so if you're interested in this project, we recommend watching.
+
+<p align="middle">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nEeI4QNNJhY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</p>
+
+## Development Environment
+- Package manager
+  - Anaconda 2019.03 version
+  - 
+프로젝트에 사용된 데이터셋은 다음과 같습니다.
+- ![Stanford Dog dataset](http://vision.stanford.edu/aditya86/ImageNetDogs/)
+- Google image crawling (cat dataset is 100% self-build.)
 
 ## Welcome to GitHub Pages
 
-흐르는 강물을 거꾸로 거슬러 오르는 연어들의 비트박스 공백 두칸이 줄바꿈  
-역슬래시 써도    줄바꿈 된다는데 맞나여?? ㄹㅇ 인지 확인합니다잉\
-진짜네 씌벌
+흐르는 강물을 거꾸로 거슬러 오르는 연어들의 공백 두칸이 줄바꿈  
+역슬래시 써도    줄바꿈 된다는데 맞나여?? ㄹㅇ 인지 확인합니다\
+진짜네 ㄷㄷ...
 
 You can use the [editor on GitHub](https://github.com/GijuAhn/Zolzak_PetBreedsClassification/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
