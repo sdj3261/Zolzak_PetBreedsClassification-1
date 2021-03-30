@@ -58,7 +58,11 @@ The video below is a recording of Graduation II, the final presentation. We're g
     ```
 
   5. The following command lets you download a project to your local storage:\
-   `git clone https://github.com/GijuAhn/Zolzak_PetBreedsClassification.git`
+
+   ```bash
+   git clone https://github.com/GijuAhn/Zolzak_PetBreedsClassification.git
+   ```
+
   6. Build and Run!
 
 - Language
@@ -84,7 +88,11 @@ The video below is a recording of Graduation II, the final presentation. We're g
 
 The initial goal was to create an object-detect automatic photo classifier, album cleanup program for people whose photos were not stored on the hard disk and were mixed randomly. We've tried a variety of things with CIFAR-100 dataset (100 classes, 60000 images), and we've found that the more superclasses, the more difficult the image classification becomes, the more difficult it is to cover with most machines. There was a feedback here to reduce the number of superclasses, and instead to break down the subclasses, which led to the idea of pet classification applications.
 
-![TooManyClasses](https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/tooMuchSuperclass.png)
+<!-- ![TooManyClasses](https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/tooMuchSuperclass.png) -->
+
+<p align="middle">
+<img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/tooMuchSuperclass.png" width="580" height="400"><br>
+</p>
 
 2018년 농림축산검역본부의 통계[[기사]](http://www.animalrights.kr/news/articleView.html?idxno=823)에 따르면, 국내에서 반려동물을 기르는 가구 비율은 전체 가구의 23.7% 이고, 반려동물을 기르는 가정의 90%이상(개 75.9%, 고양이 14.4%)이 개 또는 고양이를 기르는 것으로 조사되었습니다. 따라서, 개와 고양이를 합리적인 수준으로 분류할 수 있다면, 전체 반려동물의 90% 이상을 커버할 수 있다고 판단했습니다.\
 또한, 강아지는 많은 사람들이 키우는 만큼 그 종류와 수가 많지만, 고양이는 상대적으로 품종의 수도 적고, 키우는 사람들의 수도 적었습니다. 이 비율은 약 5:1 정도로 조사되었고, 이에 따라 개와 고양이 이미지 데이터셋을 각각 133종(8351이미지), 30종(4890이미지) 규모로 구축하였습니다.
@@ -105,29 +113,51 @@ Also, dogs have many kinds and numbers as many people raise them, but cats have 
    - Average(x10) test accuracy 96.90%
    - 이미지 넣어야됨
 
-3. 11 Categories classification
+<p align="middle">
+<img src="https://github.com/GijuAhn/Zolzak_PetBreedsClassification/blob/gh-pages/imgs_for_pages/person,animal,landscape.png?raw=true" width="400" height="400">
+</p>
+
+1. 11 Categories classification
    - Man, Woman, people, dog, cat, food, building, sky, forest, mountain, ocean
    - 500 images each, total 5500
    - Using CNN, Tensorflow
    - Average(x10) test accuracy 77.14%
    - 여기도 이미지
+
+<p align="middle">
+<img src="https://github.com/GijuAhn/Zolzak_PetBreedsClassification/blob/gh-pages/imgs_for_pages/11categories.png?raw=true" width="400" height="400">
+</p>
+
 4. 10 Categories classification
    - CIFAR-10 dataset
    - 6000 images each, total 60000
    - Using CNN, Pytorch with VGG16 transfer learning
    - Average(x20) test accuracy 92.91%
-   - 여기도
+
+<p align="middle">
+<img src="https://github.com/GijuAhn/Zolzak_PetBreedsClassification/blob/gh-pages/imgs_for_pages/10categories,pytorch.png?raw=true" width="400" height="310">
+</p>
+
 5. Dog breeds classification
    - 133 classes, total 8351 images
    - Using CNN, Tensorflow + Keras and OpenCV with ResNet-50 transfer learning
    - Last trained epoch validation accuracy 99.88%, loss 0.0076
    - After x30 epochs, test accuracy 83.85%
    - 여기는 이미지+설명(영어) 넣어야됨
+
+<p align="middle">
+<img src="https://github.com/GijuAhn/Zolzak_PetBreedsClassification/blob/gh-pages/imgs_for_pages/dogBreeds.png?raw=true" width="560" height="280">
+</p>
+
 6. Cat breeds classification
    - 30 classes, total 4890 images
    - Using CNN, Tensorflow + Keras and OpenCV with ResNet-50 transfer learning
    - Last trained epoch validation accuracy 99.99%, loss 0.0311
    - After x30 epochs, test accuracy 85.59%
+
+<p align="middle">
+<img src="https://github.com/GijuAhn/Zolzak_PetBreedsClassification/blob/gh-pages/imgs_for_pages/catBreeds.png?raw=true" width="560" height="280">
+</p>
 
 ## Implementation
 
