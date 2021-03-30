@@ -10,8 +10,14 @@
 
 ## Contents
 
-- [Introduction](#introduction)
-- [Development Environment](#development-environment)
+- [**Graduation Project III**](#graduation-project-iii)
+  - [**🐶 Pet Breeds Classification 🐱**](#-pet-breeds-classification-)
+  - [Contents](#contents)
+  - [Introduction](#introduction)
+  - [Development Environment](#development-environment)
+  - [Idea Improvement](#idea-improvement)
+  - [Progress](#progress)
+  - [Implementation](#implementation)
 
 ## Introduction
 
@@ -19,11 +25,11 @@
 
 저희는 강아지 또는 고양이 사진을 넣으면 품종이 무엇인지 알려주는 웹 베이스드 파이썬 프로그램을 만들었습니다. 나아가, 사용자가 자신의 얼굴 사진을 입력했을 때, 본인과 닮은 강아지 또는 고양이의 품종을 보여주는 기능(*닮은꼴 찾기)을 추가하여 앱을 사용하는 재미를 더했습니다.
 
+아래 영상은 졸업작품II, 최종 프레젠테이션을 녹화한 것입니다. 프로젝트 진행 과정 및 결과를 전체적으로 설명하고 있으므로, 이 프로젝트에 관심이 있으시다면 시청을 추천합니다.
+
 The theme of our graduation project is classifying breeds of pets, especially dogs and cats. Sometimes I wonder what kind of cool dogs I encountered while taking a walk or what kind of cute cat I saw on Youtube. However, it is not easy to search by describing the appearance of the breed. "Cat with black face and feet" ☜ That's how it's hard to find the breed. In that case, if you use the image classification application we created, you can find out the breed of a dog or cat easily and interestingly with just one picture.
 
 We created a web-based Python program that tells you what breed you have when you put pictures of dogs or cats. Furthermore, when a user enters a picture of his or her face, he or she adds a feature that shows the breed of a dog or cat that looks like him or her, adding to the fun of using the app.
-
-아래 영상은 졸업작품II, 최종 프레젠테이션을 녹화한 것입니다. 프로젝트 진행 과정 및 결과를 전체적으로 설명하고 있으므로, 이 프로젝트에 관심이 있으시다면 시청을 추천합니다.
 
 The video below is a recording of Graduation II, the final presentation. We're giving you a complete overview of the project progress and results, so if you're interested in this project, we recommend watching.
 
@@ -47,9 +53,13 @@ The video below is a recording of Graduation II, the final presentation. We're g
   3. Launch Anaconda prompt with administrator.
   4. You can run the commands below to create a virtual environment and install packages at once!
 
-  ```cmd
-  conda create -n(--name) VENV_NAME --file PATH\zolzak_conda_packages_export.txt
-  ```
+    ```cmd
+    conda create -n(--name) VENV_NAME --file PATH\zolzak_conda_packages_export.txt
+    ```
+
+  5. The following command lets you download a project to your local storage:\
+   `git clone https://github.com/GijuAhn/Zolzak_PetBreedsClassification.git`
+  6. Build and Run!
 
 - Language
   - Python 3.7
@@ -82,40 +92,53 @@ The initial goal was to create an object-detect automatic photo classifier, albu
 According to statistics from the Ministry of Agriculture, Food and Rural Affairs in 2018, 23.7% of households raised pets in Korea, and more than 90% (75.9% of dogs, 14.4% of cats) raised dogs or cats. Therefore, if dogs and cats can be classified at a reasonable level, they can cover more than 90 percent of all pets.\
 Also, dogs have many kinds and numbers as many people raise them, but cats have relatively few breeds and fewer people raise them. This ratio was found to be about 5:1, resulting in a dog and cat image dataset of 133 specifications to 8351 images and 30 specifications to 4890 images, respectively.
 
-## Welcome to GitHub Pages
+## Progress
 
-You can use the [editor on GitHub](https://github.com/GijuAhn/Zolzak_PetBreedsClassification/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+1. Binary classification: Cat or Dog
+   - 2 categories, 1000 images each (total 2000)
+   - Using K-Nearest Neighbor Algorithm
+   - Average(x10) test accuracy 87.51%
+2. 3 Categories classification
+   - Person, Animal, Landscape
+   - 1000 images each, total 3000
+   - Using CNN(Convolution Neural Network)
+   - Average(x10) test accuracy 96.90%
+   - 이미지 넣어야됨
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+3. 11 Categories classification
+   - Man, Woman, people, dog, cat, food, building, sky, forest, mountain, ocean
+   - 500 images each, total 5500
+   - Using CNN, Tensorflow
+   - Average(x10) test accuracy 77.14%
+   - 여기도 이미지
+4. 10 Categories classification
+   - CIFAR-10 dataset
+   - 6000 images each, total 60000
+   - Using CNN, Pytorch with VGG16 transfer learning
+   - Average(x20) test accuracy 92.91%
+   - 여기도
+5. Dog breeds classification
+   - 133 classes, total 8351 images
+   - Using CNN, Tensorflow + Keras and OpenCV with ResNet-50 transfer learning
+   - Last trained epoch validation accuracy 99.88%, loss 0.0076
+   - After x30 epochs, test accuracy 83.85%
+   - 여기는 이미지+설명(영어) 넣어야됨
+6. Cat breeds classification
+   - 30 classes, total 4890 images
+   - Using CNN, Tensorflow + Keras and OpenCV with ResNet-50 transfer learning
+   - Last trained epoch validation accuracy 99.99%, loss 0.0311
+   - After x30 epochs, test accuracy 85.59%
 
-### Markdown
+## Implementation
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+- Learning time
+  - System Info
+    - Intel Core i5-6200U @ 2.30GHz
+    - 8GB RAM
+    - Integrated graphics (No external graphic card)
+  - Dog Classification Model Full Learning time
+    - Approx. 11~12 Hours
+  - Cat Classification Model Full Learning time
+    - Approx. 7~9 Hours
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/GijuAhn/Zolzak_PetBreedsClassification/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+- Technical information
