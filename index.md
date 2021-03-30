@@ -10,8 +10,6 @@
 
 This project was carried out from the 2020 spring semester to the 2021 fall semester.
 
-------
-
 ## **Contents**
 
 - [**Graduation Project III**](#graduation-project-iii)
@@ -61,15 +59,15 @@ The video below is a recording of Graduation II, the final presentation. We're g
   3. Launch Anaconda prompt with administrator.
   4. You can run the commands below to create a virtual environment and install packages at once!
 
-    ```cmd
-    conda create -n(--name) VENV_NAME --file PATH\zolzak_conda_packages_export.txt
-    ```
+      ```cmd
+      conda create -n(--name) VENV_NAME --file PATH\zolzak_conda_packages_export.txt
+      ```
 
   5. The following command lets you download a project to your local storage:
 
-    ```bash
-    git clone https://github.com/GijuAhn/Zolzak_PetBreedsClassification.git
-    ```
+      ```bash
+      git clone https://github.com/GijuAhn/Zolzak_PetBreedsClassification.git
+      ```
 
   6. Build and Run!
 
@@ -115,7 +113,7 @@ Also, dogs have many kinds and numbers as many people raise them, but cats have 
 1. Binary classification: Cat or Dog
    - 2 categories, 1000 images each (total 2000)
    - Using K-Nearest Neighbor Algorithm
-   - Average(x10) test accuracy 87.51%
+   - Average(x10) test accuracy **87.51%**
 
 2. 3 Categories classification
    - Person, Animal, Landscape
