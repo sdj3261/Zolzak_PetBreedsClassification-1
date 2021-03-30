@@ -4,11 +4,11 @@
   <div style="text-align: right"><strong> Author: Ahn Giju, Shin Dongjae </strong></div>
   <div style="text-align: right"><strong> Advisor: Prof. Loh Woongkee </strong></div>
 
-------
-
 ## **🐶 Pet Breeds Classification 🐱**
 
-This project was carried out from the 2020 spring semester to the 2021 fall semester.
+This project was carried out from the 2020 spring semester to the 2021 fall semester. (for 3 semesters)
+
+------
 
 ## **Contents**
 
