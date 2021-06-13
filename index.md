@@ -83,10 +83,12 @@ The video below is a recording of Graduation II, the final presentation. We're g
       git clone https://github.com/GijuAhn/Zolzak_PetBreedsClassification.git
       ```
 
-  6. Build and run. Model architecture and learning processes have been made into APIs to allow users to modify and execute code themselves.
+  6. Open project folder with Pycharm.
+
+  7. Build and run. Model architecture and learning processes have been modularized and  made into APIs to allow users to modify and execute code themselves.
   
-  7. Please refer to the project structure below. The model architecture and learning process takes place at main.py. Also, database, checkpoint, web template, etc. are well modularized, making it easy for users to access.
-  <p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EA%B5%AC%EC%A1%B0.png" width="580" height="300"></p>
+  8. Please refer to the project structure below. The model architecture and learning process takes place at main.py. Also, database, checkpoint, web template, etc. are well modularized, making it easy for users to access.
+  <p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EA%B5%AC%EC%A1%B0.png" width="580" height="290"></p>
 
 - Language
   - Python 3.7
@@ -115,7 +117,7 @@ The initial goal was to create an object-detect automatic photo classifier, albu
 
 <!-- ![TooManyClasses](https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/tooMuchSuperclass.png) -->
 
-<p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/tooMuchSuperclass.png" width="580" height="400"></p>
+<p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/tooMuchSuperclass.png" width="580" height="380"></p>
 
 2018년 농림축산검역본부의 통계[[기사]](http://www.animalrights.kr/news/articleView.html?idxno=823)에 따르면, 국내에서 반려동물을 기르는 가구 비율은 전체 가구의 23.7% 이고, 반려동물을 기르는 가정의 90%이상(개 75.9%, 고양이 14.4%)이 개 또는 고양이를 기르는 것으로 조사되었습니다. 따라서, 개와 고양이를 합리적인 수준으로 분류할 수 있다면, 전체 반려동물의 90% 이상을 커버할 수 있다고 판단했습니다.\
 또한, 강아지는 많은 사람들이 키우는 만큼 그 종류와 수가 많지만, 고양이는 상대적으로 품종의 수도 적고, 키우는 사람들의 수도 적었습니다. 이 비율은 약 5:1 정도로 조사되었고, 이에 따라 개와 고양이 이미지 데이터셋을 각각 133종(8351이미지), 30종(4890이미지) 규모로 구축하였습니다.
@@ -159,7 +161,7 @@ Also, dogs have many kinds and numbers as many people raise them, but cats have 
   - Last trained epoch *validation accuracy 99.88%, loss 0.0076*
   - After x30 epochs, test accuracy **83.85%**
   - The screenshot below shows the val_loss for the validation data for each epoch and the val_accuracy for the prediction accuracy. Verify that the val_loss has been imported for each epoch, and update the model if there is an enhancement. If not, move on to the next epoch. The reason for this process is to prevent overfitting. For the image below, you can see that there is no val_loss improvement because the learning is almost finished.
-  - <p align="middle"><img src="https://github.com/GijuAhn/Zolzak_PetBreedsClassification/blob/gh-pages/imgs_for_pages/dogBreeds.png?raw=true" width="560" height="280"></p>
+  - <p align="middle"><img src="https://github.com/GijuAhn/Zolzak_PetBreedsClassification/blob/gh-pages/imgs_for_pages/dogBreeds.png?raw=true" width="500" height="250"></p>
 
 - Cat breeds classification
   - 30 classes, total 4890 images
@@ -167,7 +169,7 @@ Also, dogs have many kinds and numbers as many people raise them, but cats have 
   - Last trained epoch *validation accuracy 100.00%, loss 0.0311*
   - After x30 epochs, test accuracy **85.59%**
   - The same process was trained as the dog breeds classification model.
-  - <p align="middle"><img src="https://github.com/GijuAhn/Zolzak_PetBreedsClassification/blob/gh-pages/imgs_for_pages/catBreeds.png?raw=true" width="560" height="280"></p>
+  - <p align="middle"><img src="https://github.com/GijuAhn/Zolzak_PetBreedsClassification/blob/gh-pages/imgs_for_pages/catBreeds.png?raw=true" width="500" height="250"></p>
 
 ------
 
@@ -215,11 +217,14 @@ Also, dogs have many kinds and numbers as many people raise them, but cats have 
     - Apart from the vanishing gradients, there is another reason that we commonly use them. For a plethora of tasks (such as semantic segmentation, optical flow estimation , etc.) there is some information that was captured in the initial layers and we would like to allow the later layers to also learn from them. It has been observed that in earlier layers the learned features correspond to lower semantic information that is extracted from the input. If we had not used the skip connection that information would have turned too abstract.
   - Bottleneck feature
   - <p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/bottleneck_feature.PNG" width="500" height="235"></p>
+  - <p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/bottleneck_feature_performance.png" width="500" height="275"></p>
   
     - 1x1 filter is used for botleneck feature. The technique of reducing and increasing dimension is named after botleneck. If you apply botleneck feature, you can not only put in four times more input than when convolution is made using only 3x3 filter, but you can also perform the operation more efficiently because the weight is smaller.
   
 - Web application deployment with AWS EC2
   - In order to increase the accessibility of our service, we not only made the project an API to run directly locally, but also distributed it as a web application.
+  - 📌 [http://pet-classification.ddns.net:8080/](http://3.238.95.194:8080/)
+
   - <p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/web%20app%20deployment%20aws.png" width="560" height="290"></p>
   - EC2 t3.xlarge instance
   - 4 cores CPU
