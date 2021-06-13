@@ -122,7 +122,7 @@ Also, dogs have many kinds and numbers as many people raise them, but cats have 
    - Person, Animal, Landscape
    - 1000 images each, total 3000
    - Using CNN(Convolution Neural Network)
-   - Average(x10) test accuracy **96.90%**<p align="middle"><img src="https://github.com/GijuAhn/Zolzak_PetBreedsClassification/blob/gh-pages/imgs_for_pages/person,animal,landscape.png?raw=true" width="400" height="400"></p>
+   - Average(x10) test accuracy **96.90%** <img src="https://github.com/GijuAhn/Zolzak_PetBreedsClassification/blob/gh-pages/imgs_for_pages/person,animal,landscape.png?raw=true" width="400" height="400">
 
 3. 11 Categories classification
    - Man, Woman, people, dog, cat, food, building, sky, forest, mountain, ocean
