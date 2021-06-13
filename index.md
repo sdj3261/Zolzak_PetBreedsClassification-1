@@ -175,8 +175,8 @@ Also, dogs have many kinds and numbers as many people raise them, but cats have 
 
 - Technical information <p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/resnet%20parameter.png" width="560" height="240"></p>
   - ResNet50 Transfer Learning
-  - Data Augmentation with horizontal & vertical flip, affine transformations
+  - Data Augmentation with horizontal & vertical flip, affine transformations <p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/data_augmentation.png" width="500" height="250"></p>
   - Nested 3×3 convolution layer was used instead of 7×7 convolution layer
-  -  Batch Normalization
+  -  Batch Normalization <p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/batch_normalization.png" width="500" height="160"></p>
   -  
 ------
