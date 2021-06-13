@@ -22,6 +22,7 @@ This project was carried out from the 2020 spring semester to the 2021 fall seme
   - [**Idea Improvement**](#idea-improvement)
   - [**Progress**](#progress)
   - [**Implementation**](#implementation)
+  - [- pip freeze, virtual environment python 3.7.10](#--pip-freeze-virtual-environment-python-3710)
 
 ------
 
@@ -177,13 +178,19 @@ Also, dogs have many kinds and numbers as many people raise them, but cats have 
   - ResNet50 Transfer Learning
   - Data Augmentation with horizontal & vertical flip, affine transformations <p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/data_augmentation.png" width="500" height="260"></p>
   - Nested 3×3 convolution layers was used instead of 7×7 convolution layer
+    - A 3×3 filter can deepen the depth of the feature, and a deep depth can better extract the high-level feature. Through the synthesis of nonlinear functions, the deeper the depth, the better the model's expressiveness.
+    - By replacing the 7×7 filter with a 3×3 filter that is nested three times, we reduced memory usage and made layer depth deeper to enable more representative feature extraction.
   -  Batch Normalization <p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/batch_normalization.png" width="500" height="160"></p>
+     -  In traditional Deep Networks, if the learning rate was held too large, the gradient would either expand/vanish or fall into a bad local minima. This is due to the scale of parameters, which uses Batch Normalization to significantly reduce the effect of parameter scales on learning during propagation. Thus, the learning rate can be largely determined, which enables fast learning.
+     -  Batch Normalization has its own regularization effect. This allows the existing weight regularization term to be excluded, and furthermore, Dropout is not required. Dropout works well but has the disadvantage of slowing down the learning rate, with Batch normalization instead of dropout providing the same regularization effect while speeding up the model training.
+     -  It is calculated by accessing the training data in mini-batch units, rather than by obtaining the mean and variances for the entire training data. Obtain the mean and the variance only within the currently selected mini-batch, and normalize it using this value.
   -  Adam optimizer <p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/adam.png" width="500" height="300"></p>
-- Web application deployment with AWS EC2 <p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/adam.png" width="500" height="300"></p>
-  - t3.xlarge instance
+     -  Adam is 'Adaptive Momentum estimation', a combination of Adagrad and Momentum. In other words, the step size is adjusted by considering the momentum and gradient history. Adam is a very good optimizer, which is used as a default in many models.
+  -  Bottleneck feature
+- Web application deployment with AWS EC2<p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/web%20app%20deployment%20aws.png" width="560" height="290"></p>
+  - EC2 t3.xlarge instance
   - 4 cores CPU
   - Ubuntu 20.04 LTS
   - 16GB RAM
   - pip freeze, virtual environment python 3.7.10
-  - 
 ------
