@@ -45,11 +45,11 @@ We created a web-based Python program that tells you what breed you have when yo
 The images below are examples of actual application functional operation.
 The video below is a recording of Graduation II, the final presentation. We're giving you a complete overview of the project progress and results, so if you're interested in this project, we recommend watching.
 
-<p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/dog_result_screenshot.png" width="580" height="455"></p>
+<p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/dog_result_screenshot.png" width="560" height="450"></p>
 
-<p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/cat_result_screenshot.png" width="580" height="455"></p>
+<p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/cat_result_screenshot.png" width="560" height="440"></p>
 
-<p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/dog-human%20result.png" width="455" height="560"></p>
+<p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/dog-human%20result.png" width="400" height="520"></p>
 
 <p align="middle">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nEeI4QNNJhY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
