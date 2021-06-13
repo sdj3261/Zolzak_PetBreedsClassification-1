@@ -88,7 +88,7 @@ The video below is a recording of Graduation II, the final presentation. We're g
   7. Build and run. Model architecture and learning processes have been modularized and  made into APIs to allow users to modify and execute code themselves.
   
   8. Please refer to the project structure below. The model architecture and learning process takes place at main.py. Also, database, checkpoint, web template, etc. are well modularized, making it easy for users to access.
-  <p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EA%B5%AC%EC%A1%B0.png" width="580" height="310"></p>
+  <p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EA%B5%AC%EC%A1%B0.png" width="500" height="280"></p>
 
 - Language
   - Python 3.7
