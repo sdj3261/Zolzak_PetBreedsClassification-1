@@ -31,14 +31,14 @@ You can experience our project at this link.
 
 ## **Introduction**
 
-저희 졸업 작품 프로젝트의 주제는 애완동물, 그 중에서도 '개와 고양이의 품종 분류하기' 입니다. 산책하다 마주친 멋진 강아지나, Youtube에서 봤던 귀여운 고양이의 품종이 궁금할 때가 있지요. 하지만 그 품종의 생김새를 묘사해서 검색한다는 것이 쉬운 일이 아닙니다. '얼굴과 발이 까만 고양이' ☜ 이런 식으로 검색해서 그 고양이의 품종을 찾아내기가 쉽지 않다는 것이죠. 그럴 때, 저희가 만든 이미지 분류 어플리케이션을 사용한다면 사진 한 장만 가지고도 손쉽고 재미있게 강아지 또는 고양이의 품종을 알아낼 수 있습니다.
+저희 졸업 작품 프로젝트의 주제는 애완동물, 그 중에서도 '개와 고양이의 품종 분류하기' 입니다. 산책하다 마주친 멋진 강아지나, Youtube에서 봤던 귀여운 고양이의 품종이 궁금할 때가 있지요. 하지만 그 품종의 생김새를 묘사해서 검색한다는 것이 쉬운 일이 아닙니다. '얼굴과 발이 까만 고양이' ☜ 이런 식으로 검색해서 그 고양이의 품종을 찾아내기가 쉽지 않다는 것이죠. 그럴 때, 저희가 만든 이미지 분류 어플리케이션을 사용한다면 사진 한 장만 가지고도 손쉽고 재미있게 강아지 또는 고양이의 품종을 알아낼 수 있습니다. 뿐만 아니라, 사용자가 검색한 동물 품종에 대한 소소한 정보도 제공하죠.
 
 저희는 강아지 또는 고양이 사진을 넣으면 품종이 무엇인지 알려주는 웹 베이스드 파이썬 어플리케이션을 만들었습니다. 나아가, 사용자가 자신의 얼굴 사진을 입력했을 때, 본인과 닮은 강아지 또는 고양이의 품종을 보여주는 기능(*닮은꼴 찾기)을 추가하여 앱을 사용하는 재미를 더했습니다.
 
 아래 이미지들은 실제 어플리케이션의 기능 작동 예시입니다.
 그리고, 아래 영상은 졸업작품II, 최종 프레젠테이션을 녹화한 것입니다. 프로젝트 진행 과정 및 결과를 전체적으로 설명하고 있으므로, 이 프로젝트가 흥미로우시다면 시청해 주세요.
 
-The theme of our graduation project is classifying breeds of pets, especially dogs and cats. Sometimes I wonder what kind of cool dogs I encountered while taking a walk or what kind of cute cat I saw on Youtube. However, it is not easy to search by describing the appearance of the breed. "Cat with black face and feet" ☜ That's how it's hard to find the breed. In that case, if you use the image classification application we created, you can find out the breed of a dog or cat easily and interestingly with just one picture.
+The theme of our graduation project is classifying breeds of pets, especially dogs and cats. Sometimes I wonder what kind of cool dogs I encountered while taking a walk or what kind of cute cat I saw on Youtube. However, it is not easy to search by describing the appearance of the breed. "Cat with black face and feet" ☜ That's how it's hard to find the breed. In that case, if you use the image classification application we created, you can find out the breed of a dog or cat easily and interestingly with just one picture. It also provides some information about the animal breeds searched by the user input.
 
 We created a web-based Python program that tells you what breed you have when you put pictures of dogs or cats. Furthermore, when a user enters a picture of his or her face, he or she adds a feature that shows the breed of a dog or cat that looks like him or her, adding to the fun of using the app.
 
