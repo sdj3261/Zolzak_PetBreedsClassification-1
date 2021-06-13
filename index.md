@@ -186,7 +186,9 @@ Also, dogs have many kinds and numbers as many people raise them, but cats have 
      -  It is calculated by accessing the training data in mini-batch units, rather than by obtaining the mean and variances for the entire training data. Obtain the mean and the variance only within the currently selected mini-batch, and normalize it using this value.
   -  Adam optimizer <p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/adam.png" width="500" height="300"></p>
      -  Adam is 'Adaptive Momentum estimation', a combination of Adagrad and Momentum. In other words, the step size is adjusted by considering the momentum and gradient history. Adam is a very good optimizer, which is used as a default in many models.
-  -  Bottleneck feature
+  - Skip connection<p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/bottleneck_feature.PNG" width="500" height="230"></p>
+  -  Bottleneck feature<p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/bottleneck_feature.PNG" width="500" height="230"></p>
+     -  1x1 filter is used for botleneck feature. The technique of reducing and increasing dimension is named after botleneck. If you apply botleneck feature, you can not only put in four times more input than when convolution is made using only 3x3 filter, but you can also perform the operation more efficiently because the weight is smaller.
 - Web application deployment with AWS EC2<p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/web%20app%20deployment%20aws.png" width="560" height="290"></p>
   - EC2 t3.xlarge instance
   - 4 cores CPU
