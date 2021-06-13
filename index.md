@@ -173,11 +173,10 @@ Also, dogs have many kinds and numbers as many people raise them, but cats have 
   - Cat Classification Model Full Learning time
     - Approx. 7~9 Hours
 
-- Technical information
-  <!-- <p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/resnet%20parameter.png" width="560" height="240"></p> -->
+- Technical information <p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/resnet%20parameter.png" width="560" height="240"></p>
   - ResNet50 Transfer Learning
-  - 
-  - 
-    
-
+  - Data Augmentation with horizontal & vertical flip, affine transformations
+  - Nested 3×3 convolution layer was used instead of 7×7 convolution layer
+  -  Batch Normalization
+  -  
 ------
