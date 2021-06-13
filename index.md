@@ -84,6 +84,9 @@ The video below is a recording of Graduation II, the final presentation. We're g
       ```
 
   6. Build and run. Model architecture and learning processes have been made into APIs to allow users to modify and execute code themselves.
+  
+  7. Please refer to the project structure below. The model architecture and learning process takes place at main.py. Also, database, checkpoint, web template, etc. are well modularized, making it easy for users to access.
+  <p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EA%B5%AC%EC%A1%B0.png" width="580" height="300"></p>
 
 - Language
   - Python 3.7
@@ -134,24 +137,21 @@ Also, dogs have many kinds and numbers as many people raise them, but cats have 
   - 1000 images each, total 3000
   - Using CNN(Convolution Neural Network)
   - Average(x10) test accuracy **96.90%**
-  
-  <img src="https://github.com/GijuAhn/Zolzak_PetBreedsClassification/blob/gh-pages/imgs_for_pages/person,animal,landscape.png?raw=true" width="400" height="400">
+  - <img src="https://github.com/GijuAhn/Zolzak_PetBreedsClassification/blob/gh-pages/imgs_for_pages/person,animal,landscape.png?raw=true" width="400" height="400">
 
 - 11 Categories classification
   - Man, Woman, people, dog, cat, food, building, sky, forest, mountain, ocean
   - 500 images each, total 5500
   - Using CNN, Tensorflow
   - Average(x10) test accuracy **77.14%**
-  
-  <p align="middle"><img src="https://github.com/GijuAhn/Zolzak_PetBreedsClassification/blob/gh-pages/imgs_for_pages/11categories.png?raw=true" width="400" height="400"></p>
+  - <p align="middle"><img src="https://github.com/GijuAhn/Zolzak_PetBreedsClassification/blob/gh-pages/imgs_for_pages/11categories.png?raw=true" width="400" height="400"></p>
 
 - 10 Categories classification
   - CIFAR-10 dataset
   - 6000 images each, total 60000
   - Using CNN, Pytorch with VGG16 transfer learning
   - Average(x20) test accuracy **92.91%**
-
-  <p align="middle"><img src="https://github.com/GijuAhn/Zolzak_PetBreedsClassification/blob/gh-pages/imgs_for_pages/10categories,pytorch.png?raw=true" width="400" height="310"></p>
+  - <p align="middle"><img src="https://github.com/GijuAhn/Zolzak_PetBreedsClassification/blob/gh-pages/imgs_for_pages/10categories,pytorch.png?raw=true" width="400" height="310"></p>
 
 - Dog breeds classification
   - 133 classes, total 8351 images
@@ -159,8 +159,7 @@ Also, dogs have many kinds and numbers as many people raise them, but cats have 
   - Last trained epoch *validation accuracy 99.88%, loss 0.0076*
   - After x30 epochs, test accuracy **83.85%**
   - The screenshot below shows the val_loss for the validation data for each epoch and the val_accuracy for the prediction accuracy. Verify that the val_loss has been imported for each epoch, and update the model if there is an enhancement. If not, move on to the next epoch. The reason for this process is to prevent overfitting. For the image below, you can see that there is no val_loss improvement because the learning is almost finished.
-
-  <p align="middle"><img src="https://github.com/GijuAhn/Zolzak_PetBreedsClassification/blob/gh-pages/imgs_for_pages/dogBreeds.png?raw=true" width="560" height="300"></p>
+  - <p align="middle"><img src="https://github.com/GijuAhn/Zolzak_PetBreedsClassification/blob/gh-pages/imgs_for_pages/dogBreeds.png?raw=true" width="560" height="280"></p>
 
 - Cat breeds classification
   - 30 classes, total 4890 images
@@ -168,8 +167,7 @@ Also, dogs have many kinds and numbers as many people raise them, but cats have 
   - Last trained epoch *validation accuracy 100.00%, loss 0.0311*
   - After x30 epochs, test accuracy **85.59%**
   - The same process was trained as the dog breeds classification model.
-  
-  <p align="middle"><img src="https://github.com/GijuAhn/Zolzak_PetBreedsClassification/blob/gh-pages/imgs_for_pages/catBreeds.png?raw=true" width="560" height="300"></p>
+  - <p align="middle"><img src="https://github.com/GijuAhn/Zolzak_PetBreedsClassification/blob/gh-pages/imgs_for_pages/catBreeds.png?raw=true" width="560" height="280"></p>
 
 ------
 
