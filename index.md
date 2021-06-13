@@ -10,6 +10,10 @@
 
 This project was carried out from the 2020 spring semester to the 2021 fall semester.
 
+📌 [http://pet-classification.ddns.net:8080/](http://3.238.95.194:8080/)
+
+You can experience our project at this link.
+
 ------
 
 ## **Contents**
@@ -22,7 +26,6 @@ This project was carried out from the 2020 spring semester to the 2021 fall seme
   - [**Idea Improvement**](#idea-improvement)
   - [**Progress**](#progress)
   - [**Implementation**](#implementation)
-  - [- pip freeze, virtual environment python 3.7.10](#--pip-freeze-virtual-environment-python-3710)
 
 ------
 
@@ -32,13 +35,21 @@ This project was carried out from the 2020 spring semester to the 2021 fall seme
 
 저희는 강아지 또는 고양이 사진을 넣으면 품종이 무엇인지 알려주는 웹 베이스드 파이썬 어플리케이션을 만들었습니다. 나아가, 사용자가 자신의 얼굴 사진을 입력했을 때, 본인과 닮은 강아지 또는 고양이의 품종을 보여주는 기능(*닮은꼴 찾기)을 추가하여 앱을 사용하는 재미를 더했습니다.
 
-아래 영상은 졸업작품II, 최종 프레젠테이션을 녹화한 것입니다. 프로젝트 진행 과정 및 결과를 전체적으로 설명하고 있으므로, 이 프로젝트가 흥미로우시다면 시청해 주세요.
+아래 이미지들은 실제 어플리케이션의 기능 작동 예시입니다.
+그리고, 아래 영상은 졸업작품II, 최종 프레젠테이션을 녹화한 것입니다. 프로젝트 진행 과정 및 결과를 전체적으로 설명하고 있으므로, 이 프로젝트가 흥미로우시다면 시청해 주세요.
 
 The theme of our graduation project is classifying breeds of pets, especially dogs and cats. Sometimes I wonder what kind of cool dogs I encountered while taking a walk or what kind of cute cat I saw on Youtube. However, it is not easy to search by describing the appearance of the breed. "Cat with black face and feet" ☜ That's how it's hard to find the breed. In that case, if you use the image classification application we created, you can find out the breed of a dog or cat easily and interestingly with just one picture.
 
 We created a web-based Python program that tells you what breed you have when you put pictures of dogs or cats. Furthermore, when a user enters a picture of his or her face, he or she adds a feature that shows the breed of a dog or cat that looks like him or her, adding to the fun of using the app.
 
+The images below are examples of actual application functional operation.
 The video below is a recording of Graduation II, the final presentation. We're giving you a complete overview of the project progress and results, so if you're interested in this project, we recommend watching.
+
+<p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/dog_result_screenshot.png" width="580" height="455"></p>
+
+<p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/cat_result_screenshot.png" width="580" height="455"></p>
+
+<p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/dog-human%20result.png" width="455" height="560"></p>
 
 <p align="middle">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nEeI4QNNJhY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -72,7 +83,7 @@ The video below is a recording of Graduation II, the final presentation. We're g
       git clone https://github.com/GijuAhn/Zolzak_PetBreedsClassification.git
       ```
 
-  6. Build and Run!
+  6. Build and run. Model architecture and learning processes have been made into APIs to allow users to modify and execute code themselves.
 
 - Language
   - Python 3.7
@@ -81,10 +92,10 @@ The video below is a recording of Graduation II, the final presentation. We're g
 
 - Mainly Used Libraries & Package
   - Numpy, Pandas, Scikit-learn, Matplotlib
-  - Tensorflow 1.14.0, Tensorboard 1.14.0
-  - Keras 2.1.5
-  - Flask 1.1.2
-  - OpenCV 4.3.0
+  - [Tensorflow 1.14.0](https://www.tensorflow.org/), Tensorboard 1.14.0
+  - [Keras 2.2.5](https://keras.io/)
+  - [Flask 1.1.2](https://flask.palletsprojects.com/en/2.0.x/)
+  - [OpenCV 4.3.0](https://opencv.org/)
 
 - Dataset
   - [Stanford Dog dataset](http://vision.stanford.edu/aditya86/ImageNetDogs/)
@@ -113,49 +124,51 @@ Also, dogs have many kinds and numbers as many people raise them, but cats have 
 
 ## **Progress**
 
-1. Binary classification: Cat or Dog
-   - 2 categories, 1000 images each (total 2000)
-   - Using K-Nearest Neighbor Algorithm
-   - Average(x10) test accuracy **87.51%**
+- Binary classification: Cat or Dog
+  - 2 categories, 1000 images each (total 2000)
+  - Using K-Nearest Neighbor Algorithm
+  - Average(x10) test accuracy **87.51%**
 
-2. 3 Categories classification
-   - Person, Animal, Landscape
-   - 1000 images each, total 3000
-   - Using CNN(Convolution Neural Network)
-   - Average(x10) test accuracy **96.90%** <img src="https://github.com/GijuAhn/Zolzak_PetBreedsClassification/blob/gh-pages/imgs_for_pages/person,animal,landscape.png?raw=true" width="400" height="400">
+- 3 Categories classification
+  - Person, Animal, Landscape
+  - 1000 images each, total 3000
+  - Using CNN(Convolution Neural Network)
+  - Average(x10) test accuracy **96.90%**
+  
+  <img src="https://github.com/GijuAhn/Zolzak_PetBreedsClassification/blob/gh-pages/imgs_for_pages/person,animal,landscape.png?raw=true" width="400" height="400">
 
-3. 11 Categories classification
-   - Man, Woman, people, dog, cat, food, building, sky, forest, mountain, ocean
-   - 500 images each, total 5500
-   - Using CNN, Tensorflow
-   - Average(x10) test accuracy **77.14%**
-
+- 11 Categories classification
+  - Man, Woman, people, dog, cat, food, building, sky, forest, mountain, ocean
+  - 500 images each, total 5500
+  - Using CNN, Tensorflow
+  - Average(x10) test accuracy **77.14%**
+  
   <p align="middle"><img src="https://github.com/GijuAhn/Zolzak_PetBreedsClassification/blob/gh-pages/imgs_for_pages/11categories.png?raw=true" width="400" height="400"></p>
 
-4. 10 Categories classification
-   - CIFAR-10 dataset
-   - 6000 images each, total 60000
-   - Using CNN, Pytorch with VGG16 transfer learning
-   - Average(x20) test accuracy **92.91%**
+- 10 Categories classification
+  - CIFAR-10 dataset
+  - 6000 images each, total 60000
+  - Using CNN, Pytorch with VGG16 transfer learning
+  - Average(x20) test accuracy **92.91%**
 
   <p align="middle"><img src="https://github.com/GijuAhn/Zolzak_PetBreedsClassification/blob/gh-pages/imgs_for_pages/10categories,pytorch.png?raw=true" width="400" height="310"></p>
 
-5. Dog breeds classification
-   - 133 classes, total 8351 images
-   - Using CNN, Tensorflow + Keras and OpenCV with ResNet-50 transfer learning
-   - Last trained epoch *validation accuracy 99.88%, loss 0.0076*
-   - After x30 epochs, test accuracy **83.85%**
-   - The screenshot below shows the val_loss for the validation data for each epoch and the val_accuracy for the prediction accuracy. Verify that the val_loss has been imported for each epoch, and update the model if there is an enhancement. If not, move on to the next epoch. The reason for this process is to prevent overfitting. For the image below, you can see that there is no val_loss improvement because the learning is almost finished.
+- Dog breeds classification
+  - 133 classes, total 8351 images
+  - Using CNN, Tensorflow + Keras and OpenCV with ResNet-50 transfer learning
+  - Last trained epoch *validation accuracy 99.88%, loss 0.0076*
+  - After x30 epochs, test accuracy **83.85%**
+  - The screenshot below shows the val_loss for the validation data for each epoch and the val_accuracy for the prediction accuracy. Verify that the val_loss has been imported for each epoch, and update the model if there is an enhancement. If not, move on to the next epoch. The reason for this process is to prevent overfitting. For the image below, you can see that there is no val_loss improvement because the learning is almost finished.
 
   <p align="middle"><img src="https://github.com/GijuAhn/Zolzak_PetBreedsClassification/blob/gh-pages/imgs_for_pages/dogBreeds.png?raw=true" width="560" height="300"></p>
 
-6. Cat breeds classification
-   - 30 classes, total 4890 images
-   - Using CNN, Tensorflow + Keras and OpenCV with ResNet-50 transfer learning
-   - Last trained epoch *validation accuracy 100.00%, loss 0.0311*
-   - After x30 epochs, test accuracy **85.59%**
-   - The same process was trained as the dog breeds classification model.
-
+- Cat breeds classification
+  - 30 classes, total 4890 images
+  - Using CNN, Tensorflow + Keras and OpenCV with ResNet-50 transfer learning
+  - Last trained epoch *validation accuracy 100.00%, loss 0.0311*
+  - After x30 epochs, test accuracy **85.59%**
+  - The same process was trained as the dog breeds classification model.
+  
   <p align="middle"><img src="https://github.com/GijuAhn/Zolzak_PetBreedsClassification/blob/gh-pages/imgs_for_pages/catBreeds.png?raw=true" width="560" height="300"></p>
 
 ------
@@ -172,30 +185,51 @@ Also, dogs have many kinds and numbers as many people raise them, but cats have 
   - Cat Classification Model Full Learning time
     - Approx. 7~9 Hours
 
-- Deep Learning Technical information<p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/resnet%20parameter.png" width="560" height="240"></p>
+- Deep Learning Technical information
+  
+  <p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/resnet%20parameter.png" width="560" height="240"></p>
+
   - ResNet50 Transfer Learning
-  - Data Augmentation with horizontal & vertical flip, affine transformations <p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/data_augmentation.png" width="500" height="260"></p>
+  - Data Augmentation with horizontal & vertical flip, affine transformations
+  - <p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/data_augmentation.png" width="500" height="260"></p>
+
   - Nested 3×3 convolution layers was used instead of 7×7 convolution layer
     - A 3×3 filter can deepen the depth of the feature, and a deep depth can better extract the high-level feature. Through the synthesis of nonlinear functions, the deeper the depth, the better the model's expressiveness.
     - By replacing the 7×7 filter with a 3×3 filter that is nested three times, we reduced memory usage and made layer depth deeper to enable more representative feature extraction.
-  -  Batch Normalization <p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/batch_normalization.png" width="500" height="160"></p>
-     -  In traditional Deep Networks, if the learning rate was held too large, the gradient would either expand/vanish or fall into a bad local minima. This is due to the scale of parameters, which uses Batch Normalization to significantly reduce the effect of parameter scales on learning during propagation. Thus, the learning rate can be largely determined, which enables fast learning.
-     -  Batch Normalization has its own regularization effect. This allows the existing weight regularization term to be excluded, and furthermore, Dropout is not required. Dropout works well but has the disadvantage of slowing down the learning rate, with Batch normalization instead of dropout providing the same regularization effect while speeding up the model training.
-     -  It is calculated by accessing the training data in mini-batch units, rather than by obtaining the mean and variances for the entire training data. Obtain the mean and the variance only within the currently selected mini-batch, and normalize it using this value.
-  -  Adam optimizer <p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/adam.png" width="500" height="300"></p>
+  
+  - Batch Normalization
+  - <p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/batch_normalization.png" width="500" height="160"></p>
+
+    -  In traditional Deep Networks, if the learning rate was held too large, the gradient would either expand/vanish or fall into a bad local minima. This is due to the scale of parameters, which uses Batch Normalization to significantly reduce the effect of parameter scales on learning during propagation. Thus, the learning rate can be largely determined, which enables fast learning.
+    -  Batch Normalization has its own regularization effect. This allows the existing weight regularization term to be excluded, and furthermore, Dropout is not required. Dropout works well but has the disadvantage of slowing down the learning rate, with Batch normalization instead of dropout providing the same regularization effect while speeding up the model training.
+    -  It is calculated by accessing the training data in mini-batch units, rather than by obtaining the mean and variances for the entire training data. Obtain the mean and the variance only within the currently selected mini-batch, and normalize it using this value.
+  -  Adam optimizer
+  -  <p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/adam.png" width="500" height="300"></p>
+
      -  Adam is 'Adaptive Momentum estimation', a combination of Adagrad and Momentum. In other words, the step size is adjusted by considering the momentum and gradient history. Adam is a very good optimizer, which is used as a default in many models.
-  - Skip connection<p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/skipconnection.png" width="500" height="245"></p>
+  - Skip connection
+  - <p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/skipconnection.png" width="500" height="245"></p>
+
     - It’s really worth noticing that all these values are often less than 1, independent of the sign. In order to propagate the gradient to the earlier layer’s, backpropagation uses multiplication of the partial derivatives (as in the chain rule). In general, multiplication with absolute value less than 1 is nice because it provides some sense of training stability, although there is not a strict mathematic theorem about that. However, one can observe that for every layer that we go backwards in the network the gradient of the network gets smaller and smaller.
     - skip connection is a standard module in many convolutional architectures. By using a skip connection, we provide an alternative path for the gradient (with backpropagation). It is experimentally validated that this additional paths are often beneficial for the model convergence. Skip connections in deep architectures, as the name suggests, skip some layer in the neural network and feeds the output of one layer as the input to the next layers (instead of only the next one).
     - As previously explained, using the chain rule, we must keep multiplying terms with the error gradient as we go backwards. However, in the long chain of multiplication, if we multiply many things together that are less than one, then the resulting gradient will be very small. Thus, the gradient becomes very small as we approach the earlier layers in a deep architecture. In some cases, the gradient becomes zero, meaning that we do not update the early layers at all.
     - The core idea is to backpropagate through the identity function, by just using a vector addition. Then the gradient would simply be multiplied by one and its value will be maintained in the earlier layers. This is the main idea behind Residual Networks (ResNets): they stack these skip residual blocks together. We use an identity function to preserve the gradient.
     - Apart from the vanishing gradients, there is another reason that we commonly use them. For a plethora of tasks (such as semantic segmentation, optical flow estimation , etc.) there is some information that was captured in the initial layers and we would like to allow the later layers to also learn from them. It has been observed that in earlier layers the learned features correspond to lower semantic information that is extracted from the input. If we had not used the skip connection that information would have turned too abstract.
-  -  Bottleneck feature<p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/bottleneck_feature.PNG" width="500" height="235"></p>
-     -  1x1 filter is used for botleneck feature. The technique of reducing and increasing dimension is named after botleneck. If you apply botleneck feature, you can not only put in four times more input than when convolution is made using only 3x3 filter, but you can also perform the operation more efficiently because the weight is smaller.
-- Web application deployment with AWS EC2<p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/web%20app%20deployment%20aws.png" width="560" height="290"></p>
+  - Bottleneck feature
+  - <p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/bottleneck_feature.PNG" width="500" height="235"></p>
+  
+    - 1x1 filter is used for botleneck feature. The technique of reducing and increasing dimension is named after botleneck. If you apply botleneck feature, you can not only put in four times more input than when convolution is made using only 3x3 filter, but you can also perform the operation more efficiently because the weight is smaller.
+  
+- Web application deployment with AWS EC2
+  - In order to increase the accessibility of our service, we not only made the project an API to run directly locally, but also distributed it as a web application.
+  - <p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/web%20app%20deployment%20aws.png" width="560" height="290"></p>
   - EC2 t3.xlarge instance
   - 4 cores CPU
   - Ubuntu 20.04 LTS
   - 16GB RAM
   - pip freeze, virtual environment python 3.7.10
+  - Created reactive web service using flask.
+  - Scroll reactive Dashboard
+  - Supports both file explorer and drag-and-drop features to upload images to the server
+
 ------
