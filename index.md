@@ -22,6 +22,7 @@ This project was carried out from the 2020 spring semester to the 2021 fall seme
   - [**Idea Improvement**](#idea-improvement)
   - [**Progress**](#progress)
   - [**Implementation**](#implementation)
+  - [- pip freeze, virtual environment python 3.7.10](#--pip-freeze-virtual-environment-python-3710)
 
 ------
 
@@ -173,10 +174,16 @@ Also, dogs have many kinds and numbers as many people raise them, but cats have 
   - Cat Classification Model Full Learning time
     - Approx. 7~9 Hours
 
-- Technical information <p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/resnet%20parameter.png" width="560" height="240"></p>
+- Technical information<p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/resnet%20parameter.png" width="560" height="240"></p>
   - ResNet50 Transfer Learning
-  - Data Augmentation with horizontal & vertical flip, affine transformations <p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/data_augmentation.png" width="500" height="250"></p>
-  - Nested 3×3 convolution layer was used instead of 7×7 convolution layer
+  - Data Augmentation with horizontal & vertical flip, affine transformations <p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/data_augmentation.png" width="500" height="260"></p>
+  - Nested 3×3 convolution layers was used instead of 7×7 convolution layer
   -  Batch Normalization <p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/batch_normalization.png" width="500" height="160"></p>
-  -  
+  -  Adam optimizer <p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/adam.png" width="500" height="300"></p>
+- Web application deployment with AWS EC2 <p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/adam.png" width="500" height="300"></p>
+  - t3.xlarge instance
+  - 4 cores CPU
+  - Ubuntu 20.04 LTS
+  - 16GB RAM
+  - pip freeze, virtual environment python 3.7.10
 ------
