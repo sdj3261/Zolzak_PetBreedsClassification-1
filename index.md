@@ -26,6 +26,7 @@ You can experience our project at this link.
   - [**Idea Improvement**](#idea-improvement)
   - [**Progress**](#progress)
   - [**Implementation**](#implementation)
+  - [**Application Deployment**](#application-deployment)
 
 ------
 
@@ -225,6 +226,7 @@ Also, dogs have many kinds and numbers as many people raise them, but cats have 
   
     - 1x1 filter is used for botleneck feature. The technique of reducing and increasing dimension is named after botleneck. If you apply botleneck feature, you can not only put in four times more input than when convolution is made using only 3x3 filter, but you can also perform the operation more efficiently because the weight is smaller.
   
+## **Application Deployment**
 - Web application deployment with AWS EC2
   - In order to increase the accessibility of our service, we not only made the project an API to run directly locally, but also distributed it as a web application.
   - 📌 [http://pet-classification.ddns.net:8080/](http://3.238.95.194:8080/)
@@ -238,5 +240,6 @@ Also, dogs have many kinds and numbers as many people raise them, but cats have 
   - Created reactive web service using flask.
   - Scroll reactive Dashboard
   - Supports both file explorer and drag-and-drop features to upload images to the server
+  - The 'nohup' command ensures that the service continues to operate even if the session at the terminal running the process on Linux is disconnected.
 
 ------
