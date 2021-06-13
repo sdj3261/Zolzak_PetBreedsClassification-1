@@ -22,7 +22,6 @@ This project was carried out from the 2020 spring semester to the 2021 fall seme
   - [**Idea Improvement**](#idea-improvement)
   - [**Progress**](#progress)
   - [**Implementation**](#implementation)
-  - [- pip freeze, virtual environment python 3.7.10](#--pip-freeze-virtual-environment-python-3710)
 
 ------
 
@@ -186,4 +185,5 @@ Also, dogs have many kinds and numbers as many people raise them, but cats have 
   - Ubuntu 20.04 LTS
   - 16GB RAM
   - pip freeze, virtual environment python 3.7.10
+  - 
 ------
