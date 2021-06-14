@@ -6,7 +6,11 @@
 
 ## **🐶 Pet Breeds Classification 🐱**
 
-<p align="middle"><img src="https://github.com/GijuAhn/Zolzak_PetBreedsClassification/blob/gh-pages/imgs_for_pages/%EB%8C%95%EB%83%A5%EC%9D%B4.png?raw=true" width="583" height="330"></p>
+<p align="middle"><img src="https://github.com/GijuAhn/Zolzak_PetBreedsClassification/blob/gh-pages/imgs_for_pages/%EB%8C%95%EB%83%A5%EC%9D%B4.png?raw=true" width="560" height="315"></p>
+
+<p align="middle">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/u2X-KlifLiU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</p>
 
 This project was carried out from the 2020 spring semester to the 2021 fall semester.
 
