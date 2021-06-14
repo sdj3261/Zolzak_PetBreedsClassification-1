@@ -33,6 +33,12 @@ with open('data/dog_names.json') as json_file:
 cat_names=[]
 with open('data/cat_names.json') as json_file:
     cat_names = json.load(json_file)
+dog_describe = []
+with open('data/dog_des.json', encoding='UTF8') as json_file:
+    dog_describe = json.load(json_file)
+cat_describe = []
+with open('data/cat_des.json', encoding='UTF8') as json_file:
+   cat_describe = json.load(json_file)
 
 
 global sess
@@ -155,7 +161,7 @@ def Resnet_predict_breed(img_path):
     # obtain predicted vector
     predicted_vector = Resnet_Model.predict(x)
     # return dog breed that is predicted by the model
-    return dog_names[np.argmax(predicted_vector)]
+    return dog_names[np.argmax(predicted_vector)],dog_describe[np.argmax(predicted_vector)]
 
 def Resnet_predict_cat_breed(img_path):
     # extract bottleneck features
@@ -170,7 +176,7 @@ def Resnet_predict_cat_breed(img_path):
     # obtain predicted vector
     predicted_vector = Resnet_Model2.predict(x)
     # return dog breed that is predicted by the model
-    return cat_names[np.argmax(predicted_vector)]
+    return cat_names[np.argmax(predicted_vector)],cat_describe[np.argmax(predicted_vector)]
 
 
 
@@ -180,15 +186,18 @@ def predict_image(img_path):
     with graph.as_default():
         set_session(sess)
         if dog_detector(img_path)==True:
-            predicted_breed=Resnet_predict_breed(img_path).rsplit('.',1)[1].replace("_", " ")
-            return "The predicted dog breed is " + str(predicted_breed) + "."
+            predicted_breed, des = Resnet_predict_breed(img_path)
+            predicted_breed = predicted_breed.rsplit('.',1)[1].replace("_", " ")
+            return "The predicted dog breed is " + str(predicted_breed) + ".",des
         #if a human is detected in the image, return the resembling dog breed.
         if face_detector(img_path)==True:
-            predicted_breed=Resnet_predict_breed(img_path).rsplit('.',1)[1].replace("_", " ")
-            return "This photo looks like " + str(predicted_breed) + "."
+            predicted_breed, des = Resnet_predict_breed(img_path)
+            predicted_breed=predicted_breed.rsplit('.',1)[1].replace("_", " ")
+            return "This photo looks like " + str(predicted_breed) + ".", des
         #if neither is detected in the image, provide output that indicates an error.
         else:
-            return "Detect Failed, Upload another picture."
+            des ="Detect Failed"
+            return "Detect Failed, Upload another picture.", des
 
 
 
@@ -198,15 +207,18 @@ def predict_cat_image(img_path):
     with cat_graph.as_default():
         set_session(sess)
         if cat_detector(img_path)==True:
-            predicted_breed=Resnet_predict_cat_breed(img_path).rsplit('_',1)[1].replace("_", " ")
-            return "The predicted cat breed is " + str(predicted_breed) + "."
+            predicted_breed, des = Resnet_predict_cat_breed(img_path)
+            predicted_breed=predicted_breed.rsplit('_',1)[1].replace("_", " ")
+            return "The predicted cat breed is " + str(predicted_breed) + ".", des
         #if a human is detected in the image, return the resembling dog breed.
         if face_detector(img_path)==True:
-            predicted_breed=Resnet_predict_cat_breed(img_path).rsplit('_',1)[1].replace("_", " ")
-            return "This photo looks like " + str(predicted_breed) + "."
+            predicted_breed, des = Resnet_predict_cat_breed(img_path)
+            predicted_breed = predicted_breed.rsplit('_', 1)[1].replace("_", " ")
+            return "This photo looks like " + str(predicted_breed) + ".", des
         #if neither is detected in the image, provide output that indicates an error.
         else:
-            return "Detect Failed, Upload another picture."
+            des ="Detect Failed"
+            return "Detect Failed, Upload another picture.", des
 
 def result_dog(img_path):
     vowels=["a","e","i","o","u"]
@@ -214,7 +226,8 @@ def result_dog(img_path):
     with graph.as_default():
         set_session(sess)
         if dog_detector(img_path)==True:
-            predicted_breed=Resnet_predict_breed(img_path).rsplit('.',1)[1].replace("_", " ")
+            predicted_breed,des = Resnet_predict_breed(img_path)
+            predicted_breed= predicted_breed.rsplit('.',1)[1].replace("_", " ")
             txt_dog = str(predicted_breed)
             path_dir = './static/dogSimilar'
             file_list = os.listdir(path_dir)
@@ -229,7 +242,8 @@ def result_dog(img_path):
             return str(txt_dog)
         #if a human is detected in the image, return the resembling dog breed.
         if face_detector(img_path)==True:
-            predicted_breed=Resnet_predict_breed(img_path).rsplit('.',1)[1].replace("_", " ")
+            predicted_breed, des = Resnet_predict_breed(img_path)
+            predicted_breed = predicted_breed.rsplit('.', 1)[1].replace("_", " ")
             txt_dog = str(predicted_breed)
             path_dir = './static/dogSimilar'
             file_list = os.listdir(path_dir)
@@ -254,7 +268,8 @@ def result_cat(img_path):
     with cat_graph.as_default():
         set_session(sess)
         if cat_detector(img_path)==True:
-            predicted_breed=Resnet_predict_cat_breed(img_path).rsplit('_',1)[1].replace("_", " ")
+            predicted_breed, des = Resnet_predict_cat_breed(img_path)
+            predicted_breed=predicted_breed.rsplit('_',1)[1].replace("_", " ")
             txt_cat = str(predicted_breed)
             path_dir = './static/catSimilar'
             file_list = os.listdir(path_dir)
@@ -270,7 +285,8 @@ def result_cat(img_path):
             return str(txt_cat)
         #if a human is detected in the image, return the resembling dog breed.
         if face_detector(img_path)==True:
-            predicted_breed=Resnet_predict_cat_breed(img_path).rsplit('_',1)[1].replace("_", " ")
+            predicted_breed, des = Resnet_predict_cat_breed(img_path)
+            predicted_breed = predicted_breed.rsplit('_', 1)[1].replace("_", " ")
             txt_cat = str(predicted_breed)
             path_dir = './static/catSimilar'
             file_list = os.listdir(path_dir)
@@ -314,11 +330,11 @@ def success():
 		#print(image_ext.shape)
 		with graph.as_default():
 			set_session(sess)
-			txt = predict_image(img_path)
+			txt,des = predict_image(img_path)
 			txt_dog = result_dog(img_path)
 			#txt = result
 		final_text = 'Results after Detecting Dog Breed in Input Image'
-		return render_template("success.html", name = final_text, img = full_filename, out_1 = txt, out_2 = f.filename, out_3 = txt_dog)
+		return render_template("success.html", name = final_text, img = full_filename, out_1 = txt, out_2 = f.filename, out_3 = txt_dog, out_4 = des)
 
 @app.route('/cat_success', methods = ['POST'])
 def cat_success():
@@ -330,11 +346,11 @@ def cat_success():
 		img_path = full_filename
 		with cat_graph.as_default():
 			set_session(sess)
-			txt = predict_cat_image(img_path)
+			txt,des = predict_cat_image(img_path)
 			txt_cat = result_cat(img_path)
 			#txt = result
 		final_text = 'Results after Detecting Cat Breed in Input Image'
-		return render_template("cat_success.html", name = final_text, img = full_filename, out_1 = txt, out_2 = f.filename,out_3 = txt_cat)
+		return render_template("cat_success.html", name = final_text, img = full_filename, out_1 = txt, out_2 = f.filename,out_3 = txt_cat, out_4 = des)
 		
 
 @app.route('/')
@@ -351,7 +367,7 @@ def cat():
 
 
 if __name__ == '__main__':  
-	app.run(host="127.0.0.1",port=8080,debug=True)
+	app.run(host="0.0.0.0",port=8080,debug=True)
 
 
 
