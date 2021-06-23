@@ -14,9 +14,13 @@
 
 This project was carried out from the 2020 spring semester to the 2021 fall semester.
 
-📌 [http://pet-classification.ddns.net:8080/](http://3.238.95.194:8080/)
+📌 ~~<http://pet-classification.ddns.net:8080/>~~
 
-You can experience our project at this link.
+~~You can experience our project at this link.~~
+
+죄송합니다. 현재 AWS 서버 대여 기간이 만료되어 웹 애플리케이션은 사용하실 수 없습니다. 로컬로 실행하기를 원하시는 분은 아래 문서의 튜토리얼을 참고하시기 바랍니다.
+
+Sorry, but the web application is currently unavailable because the AWS server rental has expired. If you want to run it locally, please refer to the tutorial of the document below.
 
 ------
 
@@ -233,7 +237,6 @@ Also, dogs have many kinds and numbers as many people raise them, but cats have 
 ## **Application Deployment**
 - Web application deployment with AWS EC2
   - In order to increase the accessibility of our service, we not only made the project an API to run directly locally, but also distributed it as a web application.
-  - 📌 [http://pet-classification.ddns.net:8080/](http://3.238.95.194:8080/)
 
   - <p align="middle"><img src="https://raw.githubusercontent.com/GijuAhn/Zolzak_PetBreedsClassification/gh-pages/imgs_for_pages/web%20app%20deployment%20aws.png" width="560" height="290"></p>
   - EC2 t3.xlarge instance
